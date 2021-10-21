@@ -1,0 +1,6 @@
+title: Posts
+revisions: false
+date_behavior:
+  past: public
+  future: private
+route: 'posts/{slug}'

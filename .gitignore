@@ -1,15 +1,22 @@
-/node_modules
-/public/hot
-/public/storage
-/public/vendor/statamic
-/storage/*.key
+### System & PhpStorm ###
+.idea
+.DS_Store
+
+### Package managers ###
 /vendor
+/node_modules
+npm-debug.log
+yarn-error.log
+
+### Statamic ###
 .env
 .env.backup
 .phpunit.result.cache
 .php_cs.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-.DS_Store
+
+/storage/*.key
+
+/public/assets
+/public/css
+/public/js
+mix-manifest.json

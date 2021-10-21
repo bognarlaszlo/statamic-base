@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
+use App\Observers\EntrySavedObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
+use Statamic\Events\EntrySaved;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,10 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        // NOTE: Temporary workaround until https://github.com/statamic/eloquent-driver/issues/30 is addressed
+        EntrySaved::class => [
+            EntrySavedObserver::class
         ],
     ];
 

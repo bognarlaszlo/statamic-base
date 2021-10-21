@@ -6,5 +6,5 @@
 
 - [Statamic Main Site](https://statamic.com)
 - [Statamic 3 Documentation](https://statamic.dev/)
-- [Storing Users in a Database](https://statamic.dev/knowledge-base/storing-users-in-a-database)
-- [Storing Entries in a Database](https://statamic.dev/knowledge-base/storing-entries-in-a-database)
+- [Storing Users in a Database](https://statamic.dev/tips/storing-users-in-a-database)
+- [Storing Entries in a Database](https://statamic.dev/tips/storing-entries-in-a-database)

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+main() {
+    docker:"$1" "${@:2}"
+}
+
+# Docker functions
+docker:up() {
+    docker compose --env-file .docker/docker.env up -d --quiet-pull "$@"
+    docker:login
+}
+
+docker:down() {
+    docker compose down "$@"
+    logs:remove
+}
+
+docker:exec() {
+    docker exec -it maviz-statamic "$1"
+}
+
+docker:login() {
+    docker:exec /bin/zsh
+}
+
+# Helper functions
+logs:remove() {
+    rm -rf .docker/logs/*.log
+}
+
+main "$@"
